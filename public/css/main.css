@@ -83,3 +83,11 @@ ul {
 .nav-sub__logo{
   color: #ffb600;
 }
+
+.nav .nav__link{
+  text-decoration: none;
+}
+
+.nav .nav__link > i{
+  margin-right: 6px;
+}
