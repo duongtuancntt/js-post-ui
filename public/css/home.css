@@ -35,6 +35,14 @@
   opacity: 1;
 }
 
+.card .card-text{
+  display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: inherit;
+}
 @media only screen and (min-width: 768px) {
   .posts-section .post-item .post-item-menu {
     transform: scale(0.5);
