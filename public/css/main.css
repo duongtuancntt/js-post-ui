@@ -91,3 +91,24 @@ ul {
 .nav .nav__link > i{
   margin-right: 6px;
 }
+
+.search{
+  display: flex;
+  margin-bottom: 40px;
+  position: relative;
+}
+.search input{
+  text-align: center;
+
+}
+.btn-search{
+  position: absolute;
+  right: 0;
+}
+
+.fa-search{
+  position: absolute;
+left: 0;
+line-height: 40px;
+padding: 0 20px;
+}

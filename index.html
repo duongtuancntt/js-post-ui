@@ -55,7 +55,7 @@
                 longer.
               </p>
 
-              <p class="card-text">
+              <p class="card-text author-time">
                 <small class="text-muted">by</small>
                 <small data-id="author" class="text-muted font-weight-bold">
                   Hau Nguyen
@@ -190,8 +190,34 @@
         <div class="container">
           <h1 class="with-underline text-center">Latest posts</h1>
 
+          <div
+            class="row height d-flex justify-content-center align-items-center"
+          >
+            <div class="col-md-8">
+              <div class="search">
+                <i class="fa fa-search"></i>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search post in type..."
+                  name="q"
+                  id="search"
+                />
+                <button class="btn btn-search btn-primary">Search</button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="alert-search"
+            class="container col-md-8 d-none text-center alert alert-danger"
+            role="alert"
+          >
+            No results were found to match your search 😅 !
+          </div>
+
           <!-- Posts list -->
-          <ul id="postsList" class="row posts-list justify-content-center">
+          <ul id="postsList" class="row posts-list justify-content-center ps-0">
             <!-- <li class="col-12 col-md-6 col-lg-4">
               <div class="post-item mb-4">
                 <div class="card">
@@ -235,22 +261,22 @@
 
           <!-- Posts pagination -->
           <nav class="posts-nav" aria-label="Posts navigation">
-            <ul
-              hidden
-              id="postsPagination"
-              class="pagination justify-content-center"
-            >
+            <ul id="pagination" class="pagination justify-content-center">
               <li class="page-item">
                 <a class="page-link" href="#" aria-label="Previous">
-                  <span aria-hidden="true">&laquo;</span>
+                  <span class="user-select-none prev-icon" aria-hidden="true"
+                    >&laquo; Prev</span
+                  >
                 </a>
               </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <!-- <li class="page-item"><a class="page-link" href="#">1</a></li>
               <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li> -->
               <li class="page-item">
                 <a class="page-link" href="#" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
+                  <span class="user-select-none next-icon" aria-hidden="true"
+                    >Next &raquo;</span
+                  >
                 </a>
               </li>
             </ul>
