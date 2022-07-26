@@ -23,4 +23,15 @@ section.hero {
 .post-detail .post-image {
   width: 100%;
   margin-bottom: 1rem;
+  object-fit: cover;
+
+}
+#lightbox img{
+  width: 100%;
+
+}
+.post-detail .post-image:hover{
+  cursor: pointer;
+  opacity: 80%;
+  transition: all .3s;
 }
