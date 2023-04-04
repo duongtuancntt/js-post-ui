@@ -34,8 +34,25 @@ export function createPostElement(post) {
     //go to post detail
     const divElement = liElement.firstElementChild;
     if (divElement) {
-      divElement.addEventListener("click", () => {
+      divElement.addEventListener("click", (e) => {
+        //S1. triggered from menu bublelink
+        const menu = divElement.querySelector('[data-id="menu"');
+        if (menu && menu.contains(e.target)) {
+          return;
+        }
         window.location.assign(`/post-detail.html?id=${post.id}`);
+        // console.log("parent click");
+      });
+    }
+
+    const editButton = liElement.querySelector('[data-id="edit"]');
+    //add click envent for edit button
+    if (editButton) {
+      editButton.addEventListener("click", (e) => {
+        console.log("children click");
+        //S2. prevent event bubbling menu;
+        // e.stopPropagation();
+        window.location.assign(`/add-edit-post.html?id=${post.id}`);
       });
     }
 
